@@ -30,6 +30,7 @@ public class VirtualPetTest {
 		int expected = underTest.feedFood(11);
 		assertEquals(expected, 0);
 	}
+	
 	@Test
 	public void getSicknessTest() {
 		int expected = underTest.getSickness();
@@ -39,13 +40,30 @@ public class VirtualPetTest {
 	@Test
 	public void healingDecreasesSickness() {
 		int expected = underTest.giveMeMyMeds(2);
-		assertEquals(expected, 3);
-				
+		assertEquals(expected, 3);		
 	}
 	
 	@Test
 	public void sicknessCannotGoBelowZero() {
 		int expected = underTest.giveMeMyMeds(11);
+		assertEquals(expected, 0);
+	}
+	
+	@Test
+	public void getBoredomTest() {
+		int expected = underTest.getBoredom();
+		assertEquals(expected, 5);
+	}
+	
+	@Test
+	public void playingDecreasesBoredom() {
+		int expected = underTest.givePlay(2);
+		assertEquals(expected, 3);		
+	}
+	
+	@Test
+	public void boredomCannotGoBelowZero() {
+		int expected = underTest.givePlay(11);
 		assertEquals(expected, 0);
 	}
 	

@@ -10,7 +10,7 @@ public class VirtualPetTest {
 
 	@Before //Runs this method before each test.
 	public void setup() {
-		underTest = new VirtualPet();
+		underTest = new VirtualPet("Chuck Norris", 5, 5, 5);
 	}
 	
 	@Test
@@ -83,7 +83,7 @@ public class VirtualPetTest {
 		assertEquals(initialBoredom+1, boredomAfterTick);
 	}
 	
-	@Test
-	public void 
+//	@Test
+//	public void 
 	
 }

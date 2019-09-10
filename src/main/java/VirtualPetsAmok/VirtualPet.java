@@ -1,12 +1,19 @@
 package VirtualPetsAmok;
 
-public class VirtualPet {
+public class VirtualPet{
 	
 	int hunger = 5;
 	int sickness = 5;
 	int boredom = 5;
-	//refactor "value"
+	String petName;
 	
+	public VirtualPet(String nameOfPet, int hunger, int sickness, int boredom) {
+		this.petName  = nameOfPet;
+		this.hunger   = hunger;
+		this.sickness = sickness;
+		this.boredom  = boredom;
+	}
+
 	public int getHunger()
 	{
 		return hunger;

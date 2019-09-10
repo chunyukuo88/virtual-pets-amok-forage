@@ -67,4 +67,23 @@ public class VirtualPetTest {
 		assertEquals(expected, 0);
 	}
 	
+	@Test
+	public void shouldTickHunger() {
+		int initialHunger = underTest.getHunger();
+		underTest.tick();
+		int hungerAfterTick = underTest.getHunger();
+		assertEquals(initialHunger+1, hungerAfterTick);
+	}
+	
+	@Test
+	public void shouldTickBoredom() {
+		int initialBoredom = underTest.getBoredom();
+		underTest.tick();
+		int boredomAfterTick = underTest.getBoredom();
+		assertEquals(initialBoredom+1, boredomAfterTick);
+	}
+	
+	@Test
+	public void 
+	
 }

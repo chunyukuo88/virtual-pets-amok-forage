@@ -2,46 +2,52 @@ package VirtualPetsAmok;
 
 public class VirtualPet {
 	
-	int hungerValue = 5;
-	int sicknessValue = 5;
-	int boredomValue = 5;
+	int hunger = 5;
+	int sickness = 5;
+	int boredom = 5;
+	//refactor "value"
 	
 	public int getHunger()
 	{
-		return hungerValue;
+		return hunger;
 	}
 	
 	public int feedFood(int inputFeedValue)
 	{
-		hungerValue = hungerValue - inputFeedValue;
-		if (hungerValue < 0) {
-			hungerValue = 0;
+		hunger = hunger - inputFeedValue;
+		if (hunger < 0) {
+			hunger = 0;
 		}
-		return hungerValue;
+		return hunger;
 	}
 
 	public int getSickness() {
-		return sicknessValue;
+		return sickness;
 	}
 
 	public int giveMeMyMeds(int medValue)
 	{
-	sicknessValue = sicknessValue - medValue;
-	if (sicknessValue < 0) {
-		sicknessValue = 0;	
+	sickness = sickness - medValue;
+	if (sickness < 0) {
+		sickness = 0;	
 	}
-		return sicknessValue;
+		return sickness;
 	}
 
 	public int getBoredom() {
-		return boredomValue;
+		return boredom;
 	}
 
 	public int givePlay(int playValue) {
-		boredomValue = boredomValue - playValue;
-		if (boredomValue < 0) {
-			boredomValue = 0;
+		boredom = boredom - playValue;
+		if (boredom < 0) {
+			boredom = 0;
 		}
-		return boredomValue;
+		return boredom;
+	}
+
+	public void tick() {
+		hunger ++;
+		boredom ++;
 	}
 }

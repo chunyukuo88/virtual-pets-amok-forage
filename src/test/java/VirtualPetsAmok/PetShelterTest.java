@@ -2,20 +2,32 @@ package VirtualPetsAmok;
 
 import static org.junit.Assert.assertEquals;
 
+import org.junit.Before;
 import org.junit.Test;
 
 public class PetShelterTest {
+	
+	PetShelter underTest;
 
+	@Before
+	public void setup() {
+	underTest = new PetShelter();
+	}
+	
 	@Test
-	
-	
-	
 	public void addPetToShelter() {
-		PetShelter underTest = new PetShelter();
 		VirtualPet petUnderTest = new VirtualPet("chupacabra", 5,5,5);
-		underTest.petsInTheShelter.add(petUnderTest);
-		assertEquals(underTest.petsInTheShelter.get(0), (petUnderTest));
-		
+		underTest.petAdder(petUnderTest);
+		assertEquals(underTest.getPetsInTheShelter().get(0), (petUnderTest));
+	}
+	
+	@Test
+	public void addAnotherPetToShelter() {
+		VirtualPet petUnderTest2 = new VirtualPet("Bobby", 5,5,5);
+		VirtualPet petUnderTest = new VirtualPet("chupacabra", 5,5,5);
+		underTest.petAdder(petUnderTest);
+		underTest.petAdder(petUnderTest2);
+		assertEquals(underTest.getPetsInTheShelter().get(1), (petUnderTest2));
 	}
 	
 }

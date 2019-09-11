@@ -3,7 +3,17 @@ package VirtualPetsAmok;
 import java.util.ArrayList;
 
 public class PetShelter {
+	
+	private ArrayList<VirtualPet> petsInTheShelter = new ArrayList<>();
+	
+	public ArrayList<VirtualPet> getPetsInTheShelter() {
+		return petsInTheShelter;
+	}
 
-	ArrayList<VirtualPet> petsInTheShelter = new ArrayList<VirtualPet>();
+	public void petAdder(VirtualPet pet) {
+		petsInTheShelter.add(pet);
+	
 
+
+	}
 }

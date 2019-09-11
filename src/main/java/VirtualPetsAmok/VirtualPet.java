@@ -7,6 +7,10 @@ public class VirtualPet{
 	int boredom = 5;
 	String petName;
 	
+	public String getPetName() {
+		return petName;
+	}
+
 	public VirtualPet(String nameOfPet, int hunger, int sickness, int boredom) {
 		this.petName  = nameOfPet;
 		this.hunger   = hunger;

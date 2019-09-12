@@ -19,8 +19,7 @@ public class PetShelter {
 	}
 
 	public void petAdder(VirtualPet pet) {
-		petsInTheShelter.put(pet.getPetName(), pet); //Left off here on 9/11/2019
-		//work on briefly with Ben, added getter
+		petsInTheShelter.put(pet.getPetName(), pet); 
 	}
 
 }

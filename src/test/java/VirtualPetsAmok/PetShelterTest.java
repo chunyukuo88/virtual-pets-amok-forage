@@ -46,16 +46,25 @@ public class PetShelterTest {
 		underTest.removePet(petUnderTest);
 		assertThat(petsAddedAndRemoved, containsInAnyOrder(petUnderTest, petUnderTest2));
 	}
+	
 	@Test
-	public void viewPetsInShelter() {
-		//Arrange
-		//Act
-		underTest.takeInPet(petUnderTest);
-		underTest.takeInPet(petUnderTest2);
-		Collection<String> result = underTest.retrievePetsAndStatus();
-
-		//Assert
-		assertThat(result, containsInAnyOrder(petUnderTest.toString(), petUnderTest2.toString()));
-
+	public void displayNameAndStatsForOnePet() {
+		
+		assertThat(underTest.retrievePetAndStatus(petUnderTest), is("| chupacabra | 5 | 5 | 5 |"));
 	}
+	
+	
+	
+//	@Test
+//	public void viewPetsInShelter() {
+//		//Arrange
+//		//Act
+//		underTest.takeInPet(petUnderTest);
+//		underTest.takeInPet(petUnderTest2);
+//		Collection<String> result = underTest.retrievePetsAndStatus();
+//
+//		//Assert
+//		assertThat(result, containsInAnyOrder(petUnderTest.toString(), petUnderTest2.toString()));
+//
+//	}
 }

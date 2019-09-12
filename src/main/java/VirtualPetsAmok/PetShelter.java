@@ -29,15 +29,15 @@ public class PetShelter {
 	}
 
 
-	public Collection<String> retrievePetsAndStatus() {
+	public String retrievePetAndStatus(VirtualPet pet) {
 		
-		ArrayList <String> statuses = new ArrayList<>();
-		int i = 0;
-		while (i < statuses.size())
-		{
-			statuses.add(i, petsInTheShelter.getValue().toString());
-		}
-		return null;
+		String petAndStatus = "| " + pet.getPetName() +
+							 " | " + pet.getBoredom() +
+							 " | " + pet.getHunger() +
+							 " | " + pet.getSickness() +
+							 " |";
+		
+		return petAndStatus;
 	}
 
 }

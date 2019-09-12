@@ -86,7 +86,7 @@ public class VirtualPetTest {
 	@Test
 	public void toStringMethodReturnsNameAndStats() {
 		String result = underTest.toString();
-		assertEquals(result, "Chuck Norris555");
+		assertEquals(result, "| Chuck Norris | 5 | 5 | 5 |");
 	}
 	
 	

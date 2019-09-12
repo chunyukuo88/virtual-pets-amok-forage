@@ -1,8 +1,8 @@
 package VirtualPetsAmok;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.Set;
 
 public class PetShelter {
 
@@ -28,9 +28,11 @@ public class PetShelter {
 		
 	}
 
-	public Set displayPetsAndStatus(HashMap petsInTheShelter) {
-		return petsInTheShelter.keySet();
+
+	public Collection<String> retrievePetsAndStatus() {
 		
+		ArrayList <String> statuses = new ArrayList<>();
+		return null;
 	}
 
 }

@@ -83,7 +83,11 @@ public class VirtualPetTest {
 		assertEquals(initialBoredom+1, boredomAfterTick);
 	}
 	
-//	@Test
-//	public void 
+	@Test
+	public void toStringMethodReturnsNameAndStats() {
+		String result = underTest.toString();
+		assertEquals("Chuck Norris", 5, 5, 5);
+	}
+	
 	
 }

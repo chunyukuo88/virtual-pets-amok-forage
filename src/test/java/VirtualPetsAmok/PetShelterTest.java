@@ -25,15 +25,12 @@ public class PetShelterTest {
 	
 	@Test
 	public void addPetToShelter() {
-//		VirtualPet petUnderTest = new VirtualPet("chupacabra", 5,5,5);
 		underTest.takeInPet(petUnderTest);
 		assertThat(underTest.getPetsInTheShelter(), contains(petUnderTest));
 	} 
 	
 	@Test
 	public void addAnotherPetToShelter() {
-//		VirtualPet petUnderTest2 = new VirtualPet("Bobby", 5,5,5);
-//		VirtualPet petUnderTest = new VirtualPet("chupacabra", 5,5,5);
 		underTest.takeInPet(petUnderTest);
 		underTest.takeInPet(petUnderTest2);
 		Collection<VirtualPet> twoAddedPets = underTest.getPetsInTheShelter();
@@ -43,8 +40,6 @@ public class PetShelterTest {
 	
 	@Test
 	public void removePetFromShelter() {
-//		VirtualPet petUnderTest2 = new VirtualPet("Bobby", 5,5,5);
-//		VirtualPet petUnderTest = new VirtualPet("chupacabra", 5,5,5);
 		underTest.takeInPet(petUnderTest);
 		underTest.takeInPet(petUnderTest2);
 		Collection<VirtualPet> petsAddedAndRemoved = underTest.getPetsInTheShelter();
@@ -54,15 +49,13 @@ public class PetShelterTest {
 	@Test
 	public void viewPetsInShelter() {
 		//Arrange
-//		VirtualPet petUnderTest2 = new VirtualPet("Bobby", 5,5,5);
-//		VirtualPet petUnderTest = new VirtualPet("chupacabra", 5,5,5);
 		//Act
-//		underTest.takeInPet(petUnderTest);
-//		underTest.takeInPet(petUnderTest2);
-//		HashMap<String, VirtualPet> PetsAndInfoToBeDisplayed = underTest.getPetsInTheShelter();
-//		underTest.displayPetsAndStatus(PetsAndInfoToBeDisplayed);
-//		//Assert
-//		assertThat(displayPetsAndStatus, is(petUnderTest, petUnderTest2));
+		underTest.takeInPet(petUnderTest);
+		underTest.takeInPet(petUnderTest2);
+		Collection<String> result = underTest.retrievePetsAndStatus();
+
+		//Assert
+		assertThat(result, containsInAnyOrder(petUnderTest.toString(), petUnderTest2.toString()));
 
 	}
 }

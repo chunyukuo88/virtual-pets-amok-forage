@@ -3,9 +3,11 @@ package VirtualPetsAmok;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.contains;
 import static org.hamcrest.Matchers.containsInAnyOrder;
+import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertEquals;
 
 import java.util.Collection;
+import java.util.HashMap;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -13,6 +15,8 @@ import org.junit.Test;
 public class PetShelterTest {
 	
 	PetShelter underTest;
+	VirtualPet petUnderTest2 = new VirtualPet("Bobby", 5,5,5);
+	VirtualPet petUnderTest = new VirtualPet("chupacabra", 5,5,5);
 
 	@Before
 	public void setup() {
@@ -21,21 +25,44 @@ public class PetShelterTest {
 	
 	@Test
 	public void addPetToShelter() {
-		VirtualPet petUnderTest = new VirtualPet("chupacabra", 5,5,5);
-		underTest.petAdder(petUnderTest);
+//		VirtualPet petUnderTest = new VirtualPet("chupacabra", 5,5,5);
+		underTest.takeInPet(petUnderTest);
 		assertThat(underTest.getPetsInTheShelter(), contains(petUnderTest));
 	} 
 	
 	@Test
 	public void addAnotherPetToShelter() {
-		VirtualPet petUnderTest2 = new VirtualPet("Bobby", 5,5,5);
-		VirtualPet petUnderTest = new VirtualPet("chupacabra", 5,5,5);
-		underTest.petAdder(petUnderTest);
-		underTest.petAdder(petUnderTest2);
+//		VirtualPet petUnderTest2 = new VirtualPet("Bobby", 5,5,5);
+//		VirtualPet petUnderTest = new VirtualPet("chupacabra", 5,5,5);
+		underTest.takeInPet(petUnderTest);
+		underTest.takeInPet(petUnderTest2);
 		Collection<VirtualPet> twoAddedPets = underTest.getPetsInTheShelter();
 		//This next line had us stumped for a while because I had done twoAddedPets.containsInAnyOrder [...]
 		assertThat(twoAddedPets, containsInAnyOrder(petUnderTest, petUnderTest2));
-		
 	}
 	
+	@Test
+	public void removePetFromShelter() {
+//		VirtualPet petUnderTest2 = new VirtualPet("Bobby", 5,5,5);
+//		VirtualPet petUnderTest = new VirtualPet("chupacabra", 5,5,5);
+		underTest.takeInPet(petUnderTest);
+		underTest.takeInPet(petUnderTest2);
+		Collection<VirtualPet> petsAddedAndRemoved = underTest.getPetsInTheShelter();
+		underTest.removePet(petUnderTest);
+		assertThat(petsAddedAndRemoved, containsInAnyOrder(petUnderTest, petUnderTest2));
+	}
+	@Test
+	public void viewPetsInShelter() {
+		//Arrange
+//		VirtualPet petUnderTest2 = new VirtualPet("Bobby", 5,5,5);
+//		VirtualPet petUnderTest = new VirtualPet("chupacabra", 5,5,5);
+		//Act
+//		underTest.takeInPet(petUnderTest);
+//		underTest.takeInPet(petUnderTest2);
+//		HashMap<String, VirtualPet> PetsAndInfoToBeDisplayed = underTest.getPetsInTheShelter();
+//		underTest.displayPetsAndStatus(PetsAndInfoToBeDisplayed);
+//		//Assert
+//		assertThat(displayPetsAndStatus, is(petUnderTest, petUnderTest2));
+
+	}
 }

@@ -2,6 +2,7 @@ package VirtualPetsAmok;
 
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.Set;
 
 public class PetShelter {
 
@@ -18,8 +19,18 @@ public class PetShelter {
 		return petsInTheShelter.values();
 	}
 
-	public void petAdder(VirtualPet pet) {
+	public void takeInPet(VirtualPet pet) {
 		petsInTheShelter.put(pet.getPetName(), pet); 
+	}
+
+	public void removePet(VirtualPet pet) {
+		petsInTheShelter.remove (pet);
+		
+	}
+
+	public Set displayPetsAndStatus(HashMap petsInTheShelter) {
+		return petsInTheShelter.keySet();
+		
 	}
 
 }

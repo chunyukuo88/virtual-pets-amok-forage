@@ -32,6 +32,11 @@ public class PetShelter {
 	public Collection<String> retrievePetsAndStatus() {
 		
 		ArrayList <String> statuses = new ArrayList<>();
+		int i = 0;
+		while (i < statuses.size())
+		{
+			statuses.add(i, petsInTheShelter.getValue().toString());
+		}
 		return null;
 	}
 

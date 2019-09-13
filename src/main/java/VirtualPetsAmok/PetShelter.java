@@ -36,8 +36,18 @@ public class PetShelter {
 							 " | " + pet.getHunger() +
 							 " | " + pet.getSickness() +
 							 " |";
-		
 		return petAndStatus;
 	}
-
+	
+//			An idea:
+//	public String produceListOfPetsInShelter() {
+//		
+//		for (VirtualPet pet : petsInTheShelter) {
+//			System.out.println("Pet name is %s.", getpetname);
+//			System.out.println("Pet species is %s.", getpetname);
+//			System.out.println("Pet age is %d.", getpetage);
+//		}
+//	}
+	
+	
 }

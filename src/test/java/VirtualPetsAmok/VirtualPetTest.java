@@ -89,11 +89,12 @@ public class VirtualPetTest {
 		assertEquals(initialBoredom+1, boredomAfterTick);
 	}
 	
-//	@Test
-//	public void toStringTest() {
-//		String result = underTest.toString();
-//		assertEquals("Chuck Norris,5,5,5", result);
-//	}
+
+	@Test
+	public void toStringMethodReturnsNameAndStats() {
+		String result = underTest.toString();
+		assertEquals(result, "| Chuck Norris | 5 | 5 | 5 |");
+	}
 	
 	
 }

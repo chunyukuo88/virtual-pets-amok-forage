@@ -29,15 +29,25 @@ public class PetShelter {
 	}
 
 
-	public Collection<String> retrievePetsAndStatus() {
+	public String retrievePetAndStatus(VirtualPet pet) {
 		
-		ArrayList <String> statuses = new ArrayList<>();
-		int i = 0;
-		while (i < statuses.size())
-		{
-			statuses.add(i, petsInTheShelter.getValue().toString());
-		}
-		return null;
+		String petAndStatus = "| " + pet.getPetName() +
+							 " | " + pet.getBoredom() +
+							 " | " + pet.getHunger() +
+							 " | " + pet.getSickness() +
+							 " |";
+		return petAndStatus;
 	}
-
+	
+//			An idea:
+//	public String produceListOfPetsInShelter() {
+//		
+//		for (VirtualPet pet : petsInTheShelter) {
+//			System.out.println("Pet name is %s.", getpetname);
+//			System.out.println("Pet species is %s.", getpetname);
+//			System.out.println("Pet age is %d.", getpetage);
+//		}
+//	}
+	
+	
 }

@@ -17,44 +17,48 @@ public class VirtualPet{
 		this.sickness = sickness;
 		this.boredom  = boredom;
 	}
+	
+	public String toString() {
+		//String returnValue = null;
+		return petName+","+hunger+",";
+	}
 
 	public int getHunger()
 	{
 		return hunger;
 	}
 	
-	public int feedFood(int inputFeedValue)
+	public void feedFood(int inputFeedValue)
 	{
 		hunger = hunger - inputFeedValue;
 		if (hunger < 0) {
 			hunger = 0;
 		}
-		return hunger;
 	}
 
 	public int getSickness() {
 		return sickness;
 	}
 
-	public int giveMeMyMeds(int medValue)
+	public void giveMeMyMeds(int medValue)
 	{
 	sickness = sickness - medValue;
 	if (sickness < 0) {
 		sickness = 0;	
 	}
-		return sickness;
+		//return sickness;
 	}
 
 	public int getBoredom() {
 		return boredom;
 	}
 
-	public int givePlay(int playValue) {
+	public void givePlay(int playValue) {
 		boredom = boredom - playValue;
 		if (boredom < 0) {
 			boredom = 0;
 		}
-		return boredom;
+		//return boredom;
 	}
 
 	public void tick() {

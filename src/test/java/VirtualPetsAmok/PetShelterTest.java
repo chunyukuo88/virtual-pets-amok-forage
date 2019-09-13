@@ -58,6 +58,11 @@ public class PetShelterTest {
 		underTest.takeInPet(petUnderTest);
 		underTest.takeInPet(petUnderTest2);
 		
+	@Test
+	public void
+		
+		
+		
 //		assertEquals();
 	}
 	
@@ -74,4 +79,6 @@ public class PetShelterTest {
 //		assertThat(result, containsInAnyOrder(petUnderTest.toString(), petUnderTest2.toString()));
 //
 //	}
+	
+	
 }

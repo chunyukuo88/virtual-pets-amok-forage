@@ -1,4 +1,4 @@
-package VirtualPetsAmok;
+package virtual_pets_amok;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -51,16 +51,16 @@ public class PetShelter {
 	}
 	
 	
-	public void produceListOfPetsInShelter() {
-				
-		for (VirtualPet pet : petsInTheShelter.values()) {
-
-			String petAndStatus =" | " + pet.getPetName() +
-					 			 " | " + pet.getBoredom() +
-								 " | " + pet.getHunger() +
-								 " | " + pet.getSickness() +
-								 " |\n";
-			System.out.println(petAndStatus);
-		}
-	}
+	
+//			An idea:
+//	public String produceListOfPetsInShelter() {
+//		
+//		for (VirtualPet pet : petsInTheShelter) {
+//			System.out.println("Pet name is %s.", getpetname);
+//			System.out.println("Pet species is %s.", getpetname);
+//			System.out.println("Pet age is %d.", getpetage);
+//		}
+//	}
+	
+	
 }

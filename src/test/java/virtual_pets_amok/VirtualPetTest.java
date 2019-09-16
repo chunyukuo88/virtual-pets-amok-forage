@@ -1,9 +1,11 @@
-package VirtualPetsAmok;
+package virtual_pets_amok;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import virtual_pets_amok.VirtualPet;
 
 public class VirtualPetTest {
 	VirtualPet underTest;

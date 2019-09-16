@@ -1,4 +1,4 @@
-package VirtualPetsAmok;
+package virtual_pets_amok;
 
 import java.util.Scanner;
 

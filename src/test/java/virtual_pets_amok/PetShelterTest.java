@@ -1,4 +1,4 @@
-package VirtualPetsAmok;
+package virtual_pets_amok;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.contains;
@@ -9,6 +9,9 @@ import java.util.Collection;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import virtual_pets_amok.PetShelter;
+import virtual_pets_amok.VirtualPet;
 
 public class PetShelterTest {
 	

@@ -58,6 +58,11 @@ public class PetShelterTest {
 		underTest.takeInPet(petUnderTest);
 		underTest.takeInPet(petUnderTest2);
 		
+	@Test
+	public void
+		
+		
+		
 //		assertEquals();
 	}
 	
@@ -83,4 +88,5 @@ public class PetShelterTest {
 		
 		
 	}
+
 }

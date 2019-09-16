@@ -81,9 +81,12 @@ public class PetShelterTest {
 		underTest.takeInPet(petUnderTest);
 		String result  = underTest.retrievePetAndStatus(petUnderTest);
 		assertThat(result, is("| chupacabra | 5 | 5 | 5 |"));
-		
-		
-		
 	}
 
+	@Test
+	public void canDisplayAllPetsNameAndStats() {
+		underTest.takeInPet(petUnderTest);
+		underTest.takeInPet(petUnderTest2);
+		
+	}
 }

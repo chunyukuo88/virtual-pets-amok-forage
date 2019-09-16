@@ -27,7 +27,7 @@ public class PetShelter {
 		petsInTheShelter.remove (pet);
 		
 	}
-
+	
 
 	public String retrievePetAndStatus(VirtualPet pet) {
 		
@@ -38,6 +38,19 @@ public class PetShelter {
 							 " |";
 		return petAndStatus;
 	}
+	
+	public static String petsAndStatusHeader() {
+		String header = "|Name    |Boredom |Hunger  |Sickness|\n";
+
+		return header;
+	}
+
+	public Collection<String> retrieveMultiplePetsAndStatus() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
 	
 //			An idea:
 //	public String produceListOfPetsInShelter() {

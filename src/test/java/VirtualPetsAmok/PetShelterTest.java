@@ -67,11 +67,20 @@ public class PetShelterTest {
 //		//Arrange
 //		//Act
 //		underTest.takeInPet(petUnderTest);
-//		underTest.takeInPet(petUnderTest2);
-//		Collection<String> result = underTest.retrievePetsAndStatus();
+//		Collection<String> result = underTest.retrieveMultiplePetsAndStatus();
 //
 //		//Assert
-//		assertThat(result, containsInAnyOrder(petUnderTest.toString(), petUnderTest2.toString()));
+//		assertThat(result, containsInAnyOrder(petUnderTest));
 //
 //	}
+	
+	@Test
+	public void printPetsAndStats() {
+		underTest.takeInPet(petUnderTest);
+		String result  = underTest.retrievePetAndStatus(petUnderTest);
+		assertThat(result, is("| chupacabra | 5 | 5 | 5 |"));
+		
+		
+		
+	}
 }

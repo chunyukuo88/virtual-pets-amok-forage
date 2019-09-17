@@ -12,9 +12,6 @@ public class PetShelter {
 		petsInTheShelter = new HashMap<>();
 	}
 	
-//	public HashMap<String, VirtualPet> getPetsInTheShelter() {
-//		return petsInTheShelter;
-//	}
 	public Collection<VirtualPet> getPetsInTheShelter() {
 		return petsInTheShelter.values();
 	}
@@ -25,12 +22,9 @@ public class PetShelter {
 
 	public void removePet(VirtualPet pet) {
 		petsInTheShelter.remove (pet);
-		
 	}
 	
-
 	public String retrievePetAndStatus(VirtualPet pet) {
-		
 		String petAndStatus = "| " + pet.getPetName() +
 							 " | " + pet.getBoredom() +
 							 " | " + pet.getHunger() +
@@ -41,17 +35,19 @@ public class PetShelter {
 	
 	public static String petsAndStatusHeader() {
 		String header = "|Name    |Boredom |Hunger  |Sickness|\n";
-
 		return header;
 	}
 
-	public Collection<String> retrieveMultiplePetsAndStatus() {
-		// TODO Auto-generated method stub
-		return null;
+	public Collection<VirtualPet> retrieveAllPets() {		
+		return petsInTheShelter.values();
 	}
 	
-	
-	
+	public String printAllPetsAndStatsInTheShelter(PetShelter petsInTheShelter)
+	{
+		
+		
+	return "";
+	}
 //			An idea:
 //	public String produceListOfPetsInShelter() {
 //		

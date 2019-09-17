@@ -19,27 +19,34 @@ public class AppUserVirtualPet {
 		
 		VirtualPet userPet = new VirtualPet(petName);
 		
-//		userPetShelter.createPet(petName);		
-//		System.out.println("What is your pet's starting Hunger level?");
-//		int petHunger = userInput.nextLine();
-//		
-//		userPetShelter.takeInPet(petName);		
+		userPetShelter.takeInPet(userPet);		
 		
 		boolean userIsAddingPetsToShelter = true;
 		
-		while (userIsAddingPetsToShelter) {
+		while (userIsAddingPetsToShelter == true) {
 			System.out.println("Add another pet? y/n");
-			String response = userInput.nextLine().toUpperCase();
+			String response = userInput.nextLine();
 
-			if (response == "N") {
+			if (response.equalsIgnoreCase("n")  ) {
 				userIsAddingPetsToShelter = false;
 			}
 			else { //add a pet to shelter
-//				System.out.println("What is the pet's name that you wish to add?");
-//				String petName = userInput.nextLine();
-//				userPetShelter.takeInPet(petName);
+				System.out.println("What is the pet's name that you wish to add?");
+				String additionalPetName = userInput.nextLine();
+				
+				VirtualPet additionalPet = new VirtualPet(additionalPetName);
+				
+				userPetShelter.takeInPet(additionalPet);		
+				
 			}
+			
 		}
+		
+		
+		
+		
+		
+		
 		
 		System.out.println("What would you like to do today?");
 

@@ -2,15 +2,16 @@ package virtual_pets_amok;
 
 public class VirtualPet{
 	
+	String petName;
 	int hunger = 5;
 	int sickness = 5;
 	int boredom = 5;
-	String petName;
 	
-	public String getPetName() {
-		return petName;
+	public VirtualPet(String nameOfPet) {
+		this.petName  = nameOfPet;
 	}
-
+	
+//Overloading constructor
 	public VirtualPet(String nameOfPet, int hunger, int sickness, int boredom) {
 		this.petName  = nameOfPet;
 		this.hunger   = hunger;
@@ -18,10 +19,14 @@ public class VirtualPet{
 		this.boredom  = boredom;
 	}
 	
-	public String toString() {
-		//String returnValue = null;
-		return petName+","+hunger+",";
+	public String getPetName() {
+		return petName;
 	}
+//	
+//	public String toString() {
+//		//String returnValue = null;
+//		return petName+","+hunger+",";
+//	}
 
 	public int getHunger()
 	{

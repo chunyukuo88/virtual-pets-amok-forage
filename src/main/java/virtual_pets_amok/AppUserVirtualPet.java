@@ -43,11 +43,6 @@ public class AppUserVirtualPet {
 		}
 		
 		
-		
-		
-		
-		
-		
 		System.out.println("What would you like to do today?");
 
 		boolean userAnswer = true;
@@ -60,7 +55,7 @@ public class AppUserVirtualPet {
 			}
 			switch (response.charAt(0)) {
 				case 'S':
-					System.out.println("case S");
+					System.out.println(userPetShelter.printAllPetsAndStatsInTheShelter());;
 					break;
 				case 'A':
 					System.out.println("case A");					

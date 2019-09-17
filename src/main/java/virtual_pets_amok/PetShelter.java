@@ -29,7 +29,7 @@ public class PetShelter {
 							 " | " + pet.getBoredom() +
 							 " | " + pet.getHunger() +
 							 " | " + pet.getSickness() +
-							 " |";
+							 " |\n";
 		return petAndStatus;
 	}
 	
@@ -42,11 +42,15 @@ public class PetShelter {
 		return petsInTheShelter.values();
 	}
 	
-	public String printAllPetsAndStatsInTheShelter(PetShelter petsInTheShelter)
+	public String printAllPetsAndStatsInTheShelter()
 	{
+		String allPetNamesAndStats = ""; 
+		for (VirtualPet pet : petsInTheShelter.values())
+		{
+			allPetNamesAndStats += retrievePetAndStatus(pet);
+		}
 		
-		
-	return "";
+	return allPetNamesAndStats;
 	}
 //			An idea:
 //	public String produceListOfPetsInShelter() {

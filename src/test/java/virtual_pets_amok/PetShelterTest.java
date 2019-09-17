@@ -4,6 +4,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.contains;
 import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.hamcrest.Matchers.is;
+import static org.junit.Assert.assertEquals;
 
 import java.util.Collection;
 
@@ -49,15 +50,15 @@ public class PetShelterTest {
 		assertThat(petsAddedAndRemoved, containsInAnyOrder(petUnderTest, petUnderTest2));
 	}
 	
-	@Test
-	public void displayNameAndStatsForOnePet() {
-		//Arrange
-		underTest.takeInPet(petUnderTest);
-		//Act
-		String result = underTest.retrievePetAndStatus(petUnderTest);
-		//Assert
-		assertThat(result, is("| chupacabra | 5 | 5 | 5 |"));
-	}
+//	@Test
+//	public void displayNameAndStatsForOnePet() {
+//		//Arrange
+//		underTest.takeInPet(petUnderTest);
+//		//Act
+//		String result = underTest.retrievePetAndStatus(petUnderTest);
+//		//Assert
+//		assertThat(result, is("| chupacabra | 5 | 5 | 5 |"));
+//	}
 	
 	@Test
 	public void nameAndStatsForAllPetsCanBeDisplayed() {
@@ -79,17 +80,20 @@ public class PetShelterTest {
 //
 //	}
 	
-	@Test
-	public void printPetsAndStats() {
-		underTest.takeInPet(petUnderTest);
-		String result  = underTest.retrievePetAndStatus(petUnderTest);
-		assertThat(result, is("| chupacabra | 5 | 5 | 5 |"));
-	}
+//	@Test
+//	public void printPetsAndStats() {
+//		underTest.takeInPet(petUnderTest);
+//		String result  = underTest.retrievePetAndStatus(petUnderTest);
+//		assertThat(result, is("| chupacabra | 5 | 5 | 5 |"));
+//	}
 
+	
 	@Test
-	public void canDisplayAllPetsNameAndStats() {
+	public void canFeedAllPets() {
 		underTest.takeInPet(petUnderTest);
-		underTest.takeInPet(petUnderTest2);
-		
+		underTest.takeInPet(petUnderTest2);	
+		underTest.feedAllPets(3);
+		int expectedpetUnderTest2Hunger = petUnderTest2.getHunger();
+		assertEquals(expectedpetUnderTest2Hunger, 2);
 	}
 }

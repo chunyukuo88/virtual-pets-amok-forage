@@ -52,15 +52,13 @@ public class PetShelter {
 		
 	return allPetNamesAndStats;
 	}
-//			An idea:
-//	public String produceListOfPetsInShelter() {
-//		
-//		for (VirtualPet pet : petsInTheShelter) {
-//			System.out.println("Pet name is %s.", getpetname);
-//			System.out.println("Pet species is %s.", getpetname);
-//			System.out.println("Pet age is %d.", getpetage);
-//		}
-//	}
-	
+
+	public void feedAllPets(int amountToFeed) {
+		for (VirtualPet pet : petsInTheShelter.values()) 
+		{
+			pet.feedFood(amountToFeed);
+		}
+	}
+
 	
 }

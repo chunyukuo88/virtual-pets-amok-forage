@@ -61,10 +61,16 @@ public class AppUserVirtualPet {
 					System.out.println("case A");					
 					break;
 				case 'F': 
-					System.out.println("case F");
+					System.out.print("How much would you like to feed the pets? Type an modest integer:\n>");
+					int amountToFeed = userInput.nextInt();
+					userPetShelter.feedAllPets(amountToFeed);
 					break;
 				case 'P': 
-					System.out.println("case P");
+					System.out.println("These are the pets in the shelter.");
+					System.out.println(userPetShelter.showAllPetNames());
+					System.out.print("Which pet do you want to play with?\n>");
+					String selectPet = userInput.nextLine();
+					//Add a method(nameOfPet) in the shelter class that plays with a single pet
 					break;
 				case 'G':
 					System.out.println("case G");
@@ -100,7 +106,6 @@ public class AppUserVirtualPet {
 		System.out.println();
 		System.out.print(">  ");
 	}
-
 }
 
 

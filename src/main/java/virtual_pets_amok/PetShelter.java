@@ -3,6 +3,7 @@ package virtual_pets_amok;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.Set;
 
 public class PetShelter {
 
@@ -58,6 +59,11 @@ public class PetShelter {
 		{
 			pet.feedFood(amountToFeed);
 		}
+	}
+
+	public Set<String> showAllPetNames() {
+		Set<String> namesOfAllPets = petsInTheShelter.keySet();
+		return namesOfAllPets;
 	}
 
 	

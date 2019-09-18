@@ -7,6 +7,7 @@ import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertEquals;
 
 import java.util.Collection;
+import java.util.Set;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -95,5 +96,13 @@ public class PetShelterTest {
 		underTest.feedAllPets(3);
 		int expectedpetUnderTest2Hunger = petUnderTest2.getHunger();
 		assertEquals(expectedpetUnderTest2Hunger, 2);
+	}
+	
+	@Test
+	public void canDisplayAllPetNamesOnly() {
+		underTest.takeInPet(petUnderTest);
+		underTest.takeInPet(petUnderTest2);
+		Set<String> setOfPetNames = underTest.showAllPetNames();
+		assertThat(setOfPetNames, containsInAnyOrder(petUnderTest.getPetName(), petUnderTest2.getPetName()));
 	}
 }

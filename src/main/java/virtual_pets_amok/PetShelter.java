@@ -75,5 +75,12 @@ public class PetShelter {
 		petsInTheShelter.get(petName).giveMeMyMeds();
 	}
 
+	public void tickAllPets() {
+		for (VirtualPet pet : petsInTheShelter.values()) {
+			pet.tick();
+		}
+		
+	}
+
 	
 }

@@ -51,7 +51,6 @@ public class VirtualPet{
 	if (sickness < 0) {
 		sickness = 0;	
 	}
-		//return sickness;
 	}
 
 	public int getBoredom() {

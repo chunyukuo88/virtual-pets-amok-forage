@@ -20,7 +20,7 @@ public class VirtualPet{
 	}
 	
 	public String getPetName() {
-		return this.petName;
+		return petName;
 	}
 //	
 //	public String toString() {
@@ -68,6 +68,5 @@ public class VirtualPet{
 	public void tick() {
 		hunger ++;
 		boredom ++;
-		
 	}
 }

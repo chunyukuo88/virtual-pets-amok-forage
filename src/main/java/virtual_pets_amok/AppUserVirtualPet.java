@@ -69,11 +69,15 @@ public class AppUserVirtualPet {
 					System.out.println("These are the pets in the shelter.");
 					System.out.println(userPetShelter.showAllPetNames());
 					System.out.print("Which pet do you want to play with?\n>");
-					String selectPet = userInput.nextLine();
-					//Add a method(nameOfPet) in the shelter class that plays with a single pet
+					String selectPetForPlay = userInput.nextLine();
+					userPetShelter.playWithOnePet(selectPetForPlay);
 					break;
 				case 'G':
-					System.out.println("case G");
+					System.out.println("These are the pets in the shelter.");
+					System.out.println(userPetShelter.showAllPetNames());
+					System.out.print("Which pet do you want to Give Meds?\n>");
+					String selectPetForMeds = userInput.nextLine();
+					userPetShelter.medicateOnePet(selectPetForMeds);
 					break;
 				case 'T': 
 					System.out.println("case T");

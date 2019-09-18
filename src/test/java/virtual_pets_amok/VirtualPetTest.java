@@ -43,14 +43,19 @@ public class VirtualPetTest {
 	
 	@Test
 	public void healingDecreasesSickness() {
-		underTest.giveMeMyMeds(2);
+		underTest.giveMeMyMeds();
 		int expected = underTest.getSickness();
-		assertEquals(expected, 3);		
+		assertEquals(expected, 4);		
 	}
 	
 	@Test
 	public void sicknessCannotGoBelowZero() {
-		underTest.giveMeMyMeds(11);
+		underTest.giveMeMyMeds();
+		underTest.giveMeMyMeds();
+		underTest.giveMeMyMeds();
+		underTest.giveMeMyMeds();
+		underTest.giveMeMyMeds();
+		underTest.giveMeMyMeds();
 		int expected = underTest.getSickness();
 		assertEquals(expected, 0);
 	}
@@ -63,14 +68,19 @@ public class VirtualPetTest {
 	
 	@Test
 	public void playingDecreasesBoredom() {
-		underTest.givePlay(2);
+		underTest.givePlay();
 		int expected = underTest.getBoredom();
-		assertEquals(expected, 3);		
+		assertEquals(expected, 4);		
 	}
 	
 	@Test
 	public void boredomCannotGoBelowZero() {
-		underTest.givePlay(11);
+		underTest.givePlay();
+		underTest.givePlay();
+		underTest.givePlay();
+		underTest.givePlay();
+		underTest.givePlay();
+		underTest.givePlay();
 		int expected = underTest.getBoredom();
 		assertEquals(expected, 0);
 	}
@@ -95,6 +105,7 @@ public class VirtualPetTest {
 	@Test
 	public void toStringMethodReturnsNameAndStats() {
 		String result = underTest.toString();
+		//known issue, wants scanner input
 		assertEquals(result, "| Chuck Norris | 5 | 5 | 5 |");
 	}
 	

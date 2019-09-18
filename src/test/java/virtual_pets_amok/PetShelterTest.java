@@ -105,4 +105,22 @@ public class PetShelterTest {
 		Set<String> setOfPetNames = underTest.showAllPetNames();
 		assertThat(setOfPetNames, containsInAnyOrder(petUnderTest.getPetName(), petUnderTest2.getPetName()));
 	}
+	
+	@Test
+	public void canPlayWithOnePet() {
+		underTest.takeInPet(petUnderTest);
+		underTest.takeInPet(petUnderTest2);
+		underTest.playWithOnePet(petUnderTest.getPetName());
+		int expectedPetUnderTestBoredom = petUnderTest.getBoredom();
+		assertThat(expectedPetUnderTestBoredom, is(4));
+	}
+	
+	@Test
+	public void canMedicateOnePet() {
+		underTest.takeInPet(petUnderTest);
+		underTest.takeInPet(petUnderTest2);
+		underTest.playWithOnePet(petUnderTest.getPetName());
+		int expectedPetUnderTestSickness = petUnderTest.getSickness();
+		assertThat(expectedPetUnderTestSickness, is(4));
+	}
 }

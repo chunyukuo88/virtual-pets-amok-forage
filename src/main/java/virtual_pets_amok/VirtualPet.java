@@ -45,9 +45,9 @@ public class VirtualPet{
 		return sickness;
 	}
 
-	public void giveMeMyMeds(int medValue)
+	public void giveMeMyMeds()
 	{
-	sickness = sickness - medValue;
+	sickness = sickness - 1;
 	if (sickness < 0) {
 		sickness = 0;	
 	}
@@ -58,8 +58,8 @@ public class VirtualPet{
 		return boredom;
 	}
 
-	public void givePlay(int playValue) {
-		boredom = boredom - playValue;
+	public void givePlay() {
+		boredom = boredom - 1;
 		if (boredom < 0) {
 			boredom = 0;
 		}

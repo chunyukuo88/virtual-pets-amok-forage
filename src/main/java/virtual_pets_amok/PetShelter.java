@@ -66,5 +66,14 @@ public class PetShelter {
 		return namesOfAllPets;
 	}
 
+	public void playWithOnePet(String petName) {
+		petsInTheShelter.get(petName).givePlay();
+		
+	}
+	
+	public void medicateOnePet(String petName) {
+		petsInTheShelter.get(petName).giveMeMyMeds();
+	}
+
 	
 }

@@ -54,32 +54,32 @@ public class AppUserVirtualPet {
 				continue;
 			}
 			switch (response.charAt(0)) {
-				case 'S':
+				case 'S':// shows all pets in shelter
 					System.out.println(userPetShelter.printAllPetsAndStatsInTheShelter());;
 					break;
-				case 'A':
+				case 'A'://Add pet to shelter. 
 					System.out.println("case A");					
 					break;
-				case 'F': 
+				case 'F': //Feed all pets.
 					System.out.print("How much would you like to feed the pets? Type an modest integer:\n>");
 					int amountToFeed = userInput.nextInt();
 					userPetShelter.feedAllPets(amountToFeed);
 					break;
-				case 'P': 
+				case 'P': //Play with single pet.
 					System.out.println("These are the pets in the shelter.");
 					System.out.println(userPetShelter.showAllPetNames());
 					System.out.print("Which pet do you want to play with?\n>");
 					String selectPetForPlay = userInput.nextLine();
 					userPetShelter.playWithOnePet(selectPetForPlay);
 					break;
-				case 'G':
+				case 'G'://Give meds to single pet.");
 					System.out.println("These are the pets in the shelter.");
 					System.out.println(userPetShelter.showAllPetNames());
 					System.out.print("Which pet do you want to Give Meds?\n>");
 					String selectPetForMeds = userInput.nextLine();
 					userPetShelter.medicateOnePet(selectPetForMeds);
 					break;
-				case 'T': 
+				case 'T': //Take single pet out of shelter.");
 					System.out.println("case T");
 					break;
 				case 'Q': 

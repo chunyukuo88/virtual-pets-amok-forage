@@ -119,7 +119,7 @@ public class PetShelterTest {
 	public void canMedicateOnePet() {
 		underTest.takeInPet(petUnderTest);
 		underTest.takeInPet(petUnderTest2);
-		underTest.playWithOnePet(petUnderTest.getPetName());
+		underTest.medicateOnePet(petUnderTest.getPetName());
 		int expectedPetUnderTestSickness = petUnderTest.getSickness();
 		assertThat(expectedPetUnderTestSickness, is(4));
 	}

@@ -76,7 +76,8 @@ public class PetShelter {
 	}
 
 	public void tickAllPets() {
-		for (VirtualPet pet : petsInTheShelter.values()) {
+		for (VirtualPet pet : petsInTheShelter.values()) 
+		{
 			pet.tick();
 		}
 		

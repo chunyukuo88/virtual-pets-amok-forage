@@ -61,6 +61,7 @@ public class AppUserVirtualPet {
 					System.out.print("How much would you like to feed the pets? Type an modest integer:\n>");
 					int amountToFeed = userInput.nextInt();
 					userPetShelter.feedAllPets(amountToFeed);
+					userPetShelter.tickAllPets();
 					break;
 				case 'P': //Play with single pet.
 					System.out.println("These are the pets in the shelter.");

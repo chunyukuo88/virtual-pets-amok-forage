@@ -123,4 +123,23 @@ public class PetShelterTest {
 		int expectedPetUnderTestSickness = petUnderTest.getSickness();
 		assertThat(expectedPetUnderTestSickness, is(4));
 	}
+	
+	@Test
+	public void tickWorksOnIndividualPet( ) {
+		underTest.takeInPet(petUnderTest);
+		underTest.takeInPet(petUnderTest2);
+		petUnderTest.tick();
+		petUnderTest.tick();
+		petUnderTest2.tick();
+		int expectedPetUnderTestBoredom = petUnderTest.getBoredom();
+		int expectedPetUnderTest2Boredom = petUnderTest2.getBoredom();
+		int expectedPetUnderTestHunger = petUnderTest.getHunger();
+		int expectedPetUnderTest2Hunger = petUnderTest2.getHunger();
+		assertEquals(expectedPetUnderTestBoredom, 7);
+		assertEquals(expectedPetUnderTestHunger, 7);
+		assertEquals(expectedPetUnderTest2Boredom, 6);
+		assertEquals(expectedPetUnderTest2Hunger, 6);
+
+	}
+	
 }

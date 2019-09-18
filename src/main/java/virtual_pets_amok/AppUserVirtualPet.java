@@ -57,9 +57,6 @@ public class AppUserVirtualPet {
 				case 'S':// shows all pets in shelter
 					System.out.println(userPetShelter.printAllPetsAndStatsInTheShelter());;
 					break;
-				case 'A'://Add pet to shelter. 
-					System.out.println("case A");					
-					break;
 				case 'F': //Feed all pets.
 					System.out.print("How much would you like to feed the pets? Type an modest integer:\n>");
 					int amountToFeed = userInput.nextInt();
@@ -72,7 +69,7 @@ public class AppUserVirtualPet {
 					String selectPetForPlay = userInput.nextLine();
 					userPetShelter.playWithOnePet(selectPetForPlay);
 					break;
-				case 'G'://Give meds to single pet.");
+				case 'G'://Give med to single pet.
 					System.out.println("These are the pets in the shelter.");
 					System.out.println(userPetShelter.showAllPetNames());
 					System.out.print("Which pet do you want to Give Meds?\n>");
@@ -101,7 +98,6 @@ public class AppUserVirtualPet {
 				+ "you would like to perform:");
 
 		System.out.println("[S]how all pets in the shelter."); 
-		System.out.println("[A]dd pet to shelter."); 
 		System.out.println("[F]eed all pets.");
 		System.out.println("[P]lay with single pet.");
 		System.out.println("[G]ive meds to single pet.");

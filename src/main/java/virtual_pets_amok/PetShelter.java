@@ -79,5 +79,17 @@ public class PetShelter {
 		petsInTheShelter.remove(petName);
 	}
 
+	public void tickAllPets() {
+		for (VirtualPet pet : petsInTheShelter.values()) {
+			pet.tick();
+		}
+	}
+	
+	public VirtualPet getPetFromPetName(String petName) {
+		VirtualPet retrievedPet = petsInTheShelter.get(petName);
+		return retrievedPet;
+	}
+	
+
 	
 }

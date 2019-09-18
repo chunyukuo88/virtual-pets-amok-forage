@@ -20,7 +20,7 @@ public class VirtualPet{
 	}
 	
 	public String getPetName() {
-		return petName;
+		return this.petName;
 	}
 //	
 //	public String toString() {
@@ -51,7 +51,6 @@ public class VirtualPet{
 	if (sickness < 0) {
 		sickness = 0;	
 	}
-		//return sickness;
 	}
 
 	public int getBoredom() {

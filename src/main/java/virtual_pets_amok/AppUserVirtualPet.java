@@ -77,7 +77,11 @@ public class AppUserVirtualPet {
 					userPetShelter.medicateOnePet(selectPetForMeds);
 					break;
 				case 'T': //Take single pet out of shelter.");
-					System.out.println("case T");
+					System.out.println("Which pet would you like to Remove?");
+					System.out.println(userPetShelter.showAllPetNames());
+
+					String selectPetToRemove = userInput.nextLine();
+					userPetShelter.removeOnePet(selectPetToRemove);
 					break;
 				case 'Q': 
 					userAnswer = false;

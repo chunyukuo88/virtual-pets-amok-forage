@@ -74,6 +74,10 @@ public class PetShelter {
 	public void medicateOnePet(String petName) {
 		petsInTheShelter.get(petName).giveMeMyMeds();
 	}
+	
+	public void removeOnePet(String petName) {
+		petsInTheShelter.remove(petName);
+	}
 
 	
 }

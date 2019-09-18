@@ -156,5 +156,13 @@ public class PetShelterTest {
 		assertEquals(expectedPetUnderTest2Hunger, 6);
 	}
 	
+	@Test
+	public void testingGetVirtualPetfromShelterUsingPetName() {
+		underTest.takeInPet(petUnderTest);
+		underTest.takeInPet(petUnderTest2);
+		VirtualPet expectedRetrievedPet = underTest.getPetFromPetName("Bobby");
+		String expectedRetrievedPetName = expectedRetrievedPet.getPetName();
+		assertEquals(expectedRetrievedPetName, "Bobby");
+	}
 	
 }

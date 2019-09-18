@@ -20,7 +20,7 @@ public class VirtualPet{
 	}
 	
 	public String getPetName() {
-		return petName;
+		return this.petName;
 	}
 //	
 //	public String toString() {

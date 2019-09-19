@@ -25,13 +25,13 @@ public class PetShelter {
 	}
 
 	public String retrievePetAndStatus(VirtualPet pet) {
-		String petAndStatus = "| " + pet.getPetName() + " | " + pet.getBoredom() + " | " + pet.getHunger() + " | "
-				+ pet.getSickness() + " |\n";
+		String petAndStatus = "| " + pet.getPetName() + " |    " + pet.getBoredom() + "    |    " + pet.getHunger() + "   |    "
+				+ pet.getSickness() + "    |\n";
 		return petAndStatus;
 	}
 
-	public static String petsAndStatusHeader() {
-		String header = "|Name    |Boredom |Hunger  |Sickness|\n";
+	public  String petsAndStatusHeader() {
+		String header = "|Name |Boredom |Hunger  |Sickness|\n";
 		return header;
 	}
 

@@ -12,7 +12,7 @@ public class AppUserVirtualPet {
 		System.out.println("Welcome to the Virtual Pet Shelter!");
 		System.out.println("Please populate your virtual pet shelter.");
 		System.out.println("Add at least one pet to your shelter.");
-		System.out.println("What is the pet's name that you wish to add?");
+		System.out.print("What is the pet's name that you wish to add?\n> ");
 		
 		String petName = userInput.nextLine();
 
@@ -53,7 +53,8 @@ public class AppUserVirtualPet {
 			switch (response.charAt(0)) {
 
 				case 'S':// shows all pets in shelter
-					System.out.println(userPetShelter.printAllPetsAndStatsInTheShelter());;
+					System.out.println(userPetShelter.petsAndStatusHeader());
+					System.out.println(userPetShelter.printAllPetsAndStatsInTheShelter());
 					break;
 				case 'F': //Feed all pets.
 					System.out.print("How much would you like to feed the pets? Type an modest integer:\n>");
@@ -75,7 +76,11 @@ public class AppUserVirtualPet {
 					userPetShelter.medicateOnePet(selectPetForMeds);
 					break;
 				case 'T': //Take single pet out of shelter.");
-					System.out.println("case T");
+					System.out.println("Which pet do you want to take out of the shelter?");
+					String selectedPetForAdoption = userInput.nextLine();
+					VirtualPet petToRemove = userPetShelter.getPetFromPetName(selectedPetForAdoption);
+					userPetShelter.removePet(petToRemove);
+					userPetShelter.tickAllPets();
 					break;
 				case 'Q': 
 					userAnswer = false;

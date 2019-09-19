@@ -23,13 +23,13 @@ public class AppUserVirtualPet {
 		boolean userIsAddingPetsToShelter = true;
 
 		while (userIsAddingPetsToShelter == true) {
-			System.out.println("Add another pet? y/n");
+			System.out.print("Add another pet? y/n\n> ");
 			String response = userInput.nextLine();
 
 			if (response.equalsIgnoreCase("n")) {
 				userIsAddingPetsToShelter = false;
 			} else { // add a pet to shelter
-				System.out.println("What is the pet's name that you wish to add?");
+				System.out.print("What is the pet's name that you wish to add?\n> ");
 				String additionalPetName = userInput.nextLine();
 
 				VirtualPet additionalPet = new VirtualPet(additionalPetName);
@@ -40,7 +40,7 @@ public class AppUserVirtualPet {
 
 		}
 
-		System.out.println("What would you like to do today?");
+		System.out.print("What would you like to do today?\n> ");
 
 		boolean userAnswer = true;
 
@@ -57,26 +57,26 @@ public class AppUserVirtualPet {
 					System.out.println(userPetShelter.printAllPetsAndStatsInTheShelter());
 					break;
 				case 'F': //Feed all pets.
-					System.out.print("How much would you like to feed the pets? Type an modest integer:\n>");
+					System.out.print("How much would you like to feed the pets? Type an modest integer:\n> ");
 					int amountToFeed = userInput.nextInt();
 					userPetShelter.feedAllPets(amountToFeed);
 					break;
 				case 'P': //Play with single pet.
 					System.out.println("These are the pets in the shelter.");
 					System.out.println(userPetShelter.showAllPetNames());
-					System.out.print("Which pet do you want to play with?\n>");
+					System.out.print("Which pet do you want to play with?\n> ");
 					String selectPetForPlay = userInput.nextLine();
 					userPetShelter.playWithOnePet(selectPetForPlay);
 					break;
 				case 'G'://Give med to single pet.
 					System.out.println("These are the pets in the shelter.");
 					System.out.println(userPetShelter.showAllPetNames());
-					System.out.print("Which pet do you want to Give Meds?\n>");
+					System.out.print("Which pet do you want to Give Meds?\n> ");
 					String selectPetForMeds = userInput.nextLine();
 					userPetShelter.medicateOnePet(selectPetForMeds);
 					break;
 				case 'T': //Take single pet out of shelter.");
-					System.out.println("Which pet do you want to take out of the shelter?");
+					System.out.print("Which pet do you want to take out of the shelter?\n> ");
 					String selectedPetForAdoption = userInput.nextLine();
 					VirtualPet petToRemove = userPetShelter.getPetFromPetName(selectedPetForAdoption);
 					userPetShelter.removePet(petToRemove);

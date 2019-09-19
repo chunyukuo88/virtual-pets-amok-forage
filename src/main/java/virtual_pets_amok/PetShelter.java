@@ -31,7 +31,8 @@ public class PetShelter {
 	}
 
 	public  String petsAndStatusHeader() {
-		String header = "|Name |Boredom |Hunger  |Sickness|\n";
+		String header = "|Name |Boredom |Hunger  |Sickness|\n"+
+	"__________________________________";
 		return header;
 	}
 

@@ -12,7 +12,7 @@ public class AppUserVirtualPet {
 		System.out.println("Welcome to the Virtual Pet Shelter!");
 		System.out.println("Please populate your virtual pet shelter.");
 		System.out.println("Add at least one pet to your shelter.");
-		System.out.print("What is the pet's name that you wish to add?\n> ");
+		System.out.print("Give your pet a three-letter name:\n> ");
 		
 		String petName = userInput.nextLine();
 
@@ -29,7 +29,7 @@ public class AppUserVirtualPet {
 			if (response.equalsIgnoreCase("n")) {
 				userIsAddingPetsToShelter = false;
 			} else { // add a pet to shelter
-				System.out.print("What is the pet's name that you wish to add?\n> ");
+				System.out.print("Give the next pet a three-letter name:\n> ");
 				String additionalPetName = userInput.nextLine();
 
 				VirtualPet additionalPet = new VirtualPet(additionalPetName);
@@ -57,9 +57,10 @@ public class AppUserVirtualPet {
 					System.out.println(userPetShelter.printAllPetsAndStatsInTheShelter());
 					break;
 				case 'F': //Feed all pets.
-					System.out.print("How much would you like to feed the pets? Type an modest integer:\n> ");
+					System.out.print("How much would you like to feed the pets? Type a modest integer:\n> ");
 					int amountToFeed = userInput.nextInt();
 					userPetShelter.feedAllPets(amountToFeed);
+					userPetShelter.tickAllPets();
 					break;
 				case 'P': //Play with single pet.
 					System.out.println("These are the pets in the shelter.");
@@ -67,6 +68,7 @@ public class AppUserVirtualPet {
 					System.out.print("Which pet do you want to play with?\n> ");
 					String selectPetForPlay = userInput.nextLine();
 					userPetShelter.playWithOnePet(selectPetForPlay);
+					userPetShelter.tickAllPets();
 					break;
 				case 'G'://Give med to single pet.
 					System.out.println("These are the pets in the shelter.");
@@ -74,6 +76,7 @@ public class AppUserVirtualPet {
 					System.out.print("Which pet do you want to Give Meds?\n> ");
 					String selectPetForMeds = userInput.nextLine();
 					userPetShelter.medicateOnePet(selectPetForMeds);
+					userPetShelter.tickAllPets();
 					break;
 				case 'T': //Take single pet out of shelter.");
 					System.out.print("Which pet do you want to take out of the shelter?\n> ");

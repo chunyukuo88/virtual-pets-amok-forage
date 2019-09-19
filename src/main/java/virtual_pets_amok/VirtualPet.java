@@ -19,7 +19,7 @@ public class VirtualPet {
 	}
 
 	public String getPetName() {
-		return this.petName;
+		return petName;
 	}
 
 	public int getHunger() {
@@ -59,5 +59,6 @@ public class VirtualPet {
 		hunger++;
 		boredom++;
 		sickness++;
+
 	}
 }

@@ -76,6 +76,7 @@ public class PetShelter {
 		for (VirtualPet pet : petsInTheShelter.values()) {
 			pet.tick();
 		}
+		
 	}
 
 	public VirtualPet getPetFromPetName(String petName) {
